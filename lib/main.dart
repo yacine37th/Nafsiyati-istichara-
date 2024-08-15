@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/firebase_options.dart';
+import 'package:flutter_application_1/view/home.dart';
 import 'package:flutter_application_1/view/sign_in.dart';
 import 'package:get/get.dart';
 
@@ -64,11 +65,11 @@ class MyApp extends StatelessWidget {
           binding: SignUpBinding(),
         ),
         GetPage(
-            name: "/SignIn",
-            page: () => const SignIn(),
-            binding: SignInBinding(),
-            // middlewares: [AuthMiddleware()]
-            ),
+          name: "/SignIn",
+          page: () => const SignIn(),
+          binding: SignInBinding(),
+          // middlewares: [AuthMiddleware()]
+        ),
         GetPage(
             name: "/EmailVerification",
             page: () => const EmailVerification(),
@@ -79,11 +80,11 @@ class MyApp extends StatelessWidget {
           binding: ForgotPasswordBinding(),
         ),
 
-        // GetPage(
-        //   name: "/HomeService",
-        //   page: () => const HomeService(),
-        //   // binding: HomeScreenAgencyBinding(),
-        // ),
+        GetPage(
+          name: "/Home",
+          page: () => const Home(),
+          // binding: HomeScreenAgencyBinding(),
+        ),
         // GetPage(
         //   name: "/AddForm",
         //   page: () => const AddForm(),

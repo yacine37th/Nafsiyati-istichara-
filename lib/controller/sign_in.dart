@@ -141,7 +141,7 @@ class SignInController extends GetxController {
         //   default:
         //     Get.offAndToNamed("/HomeService");
         // }
-        Get.offAndToNamed("/HomeClient");
+        Get.offAndToNamed("/Home");
       } else {
         Get.toNamed("/EmailVerification");
       }

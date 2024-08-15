@@ -217,11 +217,11 @@ class SignIn extends StatelessWidget {
                         const SizedBox(height: 5),
                         TextButton(
                           onPressed: () {
-                            // if (signInController.formKey.currentState!
-                            //     .validate()) {
-                            //   signInController.formKey.currentState!.save();
-                            //   signInController.signInAUser();
-                            // }
+                            if (signInController.formKey.currentState!
+                                .validate()) {
+                              signInController.formKey.currentState!.save();
+                              signInController.signInAUser();
+                            }
                           },
                           style: ButtonStyle(
                               foregroundColor: WidgetStateProperty.all(
