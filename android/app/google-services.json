@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "50600056972",
+    "project_id": "nafsiya-368a6",
+    "storage_bucket": "nafsiya-368a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50600056972:android:af5e8b313e8bb974ebc3a9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEUyVTa6wwU-K4Jh2xW1yVmrGcAbgUGLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

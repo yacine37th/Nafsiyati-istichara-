@@ -14,7 +14,7 @@ class EmailVerification extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: AppColors.kPrimary2,
+        backgroundColor: AppColors.greenColor,
         elevation: 1,
 
         leading: IconButton(
@@ -57,17 +57,17 @@ class EmailVerification extends StatelessWidget {
                 },
                 style: ButtonStyle(
                     foregroundColor: MaterialStateProperty.all(
-                      AppColors.kPrimary2,
+                      AppColors.greenColor,
                     ),
                     backgroundColor: MaterialStateProperty.all(
-                      AppColors.kPrimary2,
+                      AppColors.greenColor,
                     ),
                     overlayColor: MaterialStateColor.resolveWith((states) =>
                         AppColors.kPrimary2Onpress.withOpacity(0.2)),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(100),
                         side: const BorderSide(
-                          color: AppColors.kPrimary2,
+                          color: AppColors.greenColor,
                         )))),
                 child: Card(
                   elevation: 0,

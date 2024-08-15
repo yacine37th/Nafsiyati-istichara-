@@ -1,9 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_application_1/view/sign_in.dart';
 import 'package:get/get.dart';
 
 import 'functions/functions.dart';
+import 'middleware/auth_middleware.dart';
 import 'model/user.dart';
 import 'utils/forgot_password_bindings.dart';
 import 'utils/sign_in_binding.dart';
@@ -23,8 +26,8 @@ bool prevVerfiy = false;
 bool isPay = false;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  // currentUser = FirebaseAuth.instance.currentUser;
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  currentUser = FirebaseAuth.instance.currentUser;
   // await FirebaseFirestore.instance
   //     .collection("user")
   //     .doc("user2")
@@ -32,9 +35,9 @@ Future<void> main() async {
   //     .then((value) {
   //   isPay = value.data()?["userIsPayed"];
   // });
-  // if (currentUser != null) {
-  //   await MainFunctions.getcurrentUserInfos();
-  // }
+  if (currentUser != null) {
+    await MainFunctions.getcurrentUserInfos();
+  }
 
   runApp(const MyApp());
 }
@@ -61,11 +64,11 @@ class MyApp extends StatelessWidget {
           binding: SignUpBinding(),
         ),
         GetPage(
-          name: "/SignIn",
-          page: () => const SignIn(),
-          binding: SignInBinding(),
-          // middlewares: [AuthMiddleware()]
-        ),
+            name: "/SignIn",
+            page: () => const SignIn(),
+            binding: SignInBinding(),
+            // middlewares: [AuthMiddleware()]
+            ),
         GetPage(
             name: "/EmailVerification",
             page: () => const EmailVerification(),
