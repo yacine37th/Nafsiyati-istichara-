@@ -109,7 +109,7 @@ class ForgotPassword extends StatelessWidget {
                             filled: true,
                             focusedBorder: OutlineInputBorder(
                               borderSide:
-                                  const BorderSide(color: AppColors.kPrimary2),
+                                  const BorderSide(color: AppColors.greenColor),
                               borderRadius: BorderRadius.circular(40),
                             ),
                             border: OutlineInputBorder(

@@ -109,7 +109,7 @@ class SignIn extends StatelessWidget {
                             filled: true,
                             focusedBorder: OutlineInputBorder(
                               borderSide:
-                                  const BorderSide(color: AppColors.kPrimary2),
+                                  const BorderSide(color: AppColors.greenColor),
                               borderRadius: BorderRadius.circular(40),
                             ),
                             border: OutlineInputBorder(
@@ -170,7 +170,7 @@ class SignIn extends StatelessWidget {
                               filled: true,
                               focusedBorder: OutlineInputBorder(
                                 borderSide: const BorderSide(
-                                    color: AppColors.kPrimary2),
+                                    color: AppColors.greenColor),
                                 borderRadius: BorderRadius.circular(40),
                               ),
                               border: OutlineInputBorder(
@@ -199,8 +199,8 @@ class SignIn extends StatelessWidget {
                               },
                               style: ButtonStyle(
                                   overlayColor: WidgetStateColor.resolveWith(
-                                      (states) =>
-                                          AppColors.goldenColor2.withOpacity(0.1)),
+                                      (states) => AppColors.goldenColor2
+                                          .withOpacity(0.1)),
                                   shape: WidgetStateProperty.all(
                                       RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(100),
@@ -209,7 +209,8 @@ class SignIn extends StatelessWidget {
                                 "نسيت كلمة المرور ؟",
                                 // "Forgot Password ?".tr,
                                 style: const TextStyle(
-                                    color: AppColors.goldenColor2, fontSize: 14),
+                                    color: AppColors.goldenColor2,
+                                    fontSize: 14),
                               ),
                             )
                           ],
@@ -234,8 +235,7 @@ class SignIn extends StatelessWidget {
                                   (states) => Colors.white.withOpacity(0.1)),
                               shape: WidgetStateProperty.all(
                                   RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(100),
+                                      borderRadius: BorderRadius.circular(100),
                                       side: const BorderSide(
                                         color: AppColors.greenColor,
                                       )))),
