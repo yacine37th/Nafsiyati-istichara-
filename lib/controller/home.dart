@@ -22,7 +22,7 @@ class HomeController extends GetxController {
       id: "2",
       topicIcon: "assets/images/library.png",
       topicName: "مكتبة الكترونية ",
-      link: '/ItaamStudent',
+      link: '/ElectronicLibrary',
       conditions: '',
     ),
     EventModel(

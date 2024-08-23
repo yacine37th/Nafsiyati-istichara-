@@ -3,7 +3,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_application_1/utils/home_binding.dart';
-import 'package:flutter_application_1/utils/istichara_binding.dart';
+import 'package:flutter_application_1/utils/help_ful_binding.dart';
+import 'package:flutter_application_1/view/electronic_library.dart';
 import 'package:flutter_application_1/view/home.dart';
 import 'package:flutter_application_1/view/sign_in.dart';
 import 'package:get/get.dart';
@@ -91,7 +92,12 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: "/Istichara",
           page: () => const Istichara(),
-          binding: IsticharaBinding(),
+          binding: HelpFullBinding(),
+        ),
+        GetPage(
+          name: "/ElectronicLibrary",
+          page: () => const ElectronicLibrary(),
+          binding: HelpFullBinding(),
         ),
         // GetPage(
         //   name: "/AddForm",

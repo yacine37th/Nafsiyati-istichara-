@@ -5,14 +5,14 @@ import '../controller/help_ful.dart';
 import '../theme/main_colors.dart';
 import 'components/custom_button.dart';
 
-class Istichara extends StatelessWidget {
-  const Istichara({super.key});
+class ElectronicLibrary extends StatelessWidget {
+  const ElectronicLibrary({super.key});
 
   @override
   Widget build(BuildContext context) {
-    HelpFullController helpFulController = Get.find();
+    HelpFullController helpFullController = Get.find();
     return Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
         leading: IconButton(
             onPressed: () {
               navigator!.pop();
@@ -48,9 +48,9 @@ class Istichara extends StatelessWidget {
             ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              itemCount: helpFulController.activities.length,
+              itemCount: helpFullController.electronicActivities.length,
               itemBuilder: (context, index) {
-                final activity = helpFulController.activities[index];
+                final activity = helpFullController.electronicActivities[index];
                 return Column(
                   children: [
                     CustomButton(
@@ -89,6 +89,7 @@ class Istichara extends StatelessWidget {
           ],
         ),
       ),
+  
     );
   }
 }
