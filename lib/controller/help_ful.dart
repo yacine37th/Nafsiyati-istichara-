@@ -10,8 +10,8 @@ class HelpFullController extends GetxController {
     // ServiceContentModel(id: 2, name: "حج ", link: '/Chakawi'),
   ];
   final List<ButtonContent> electronicActivities = [
-    ButtonContent(id: 2, name: "اشرطة الفيديو", link: '/'),
-    ButtonContent(id: 2, name: "كتب الكترونية", link: '/'),
+    ButtonContent(id: 2, name: "اشرطة الفيديو", link: '/Courses'),
+    ButtonContent(id: 2, name: "كتب الكترونية", link: '/RequestedBooks'),
     // ServiceContentModel(id: 2, name: "حج ", link: '/Chakawi'),
   ];
 }

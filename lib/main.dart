@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_application_1/utils/home_binding.dart';
 import 'package:flutter_application_1/utils/help_ful_binding.dart';
+import 'package:flutter_application_1/view/courses.dart';
 import 'package:flutter_application_1/view/electronic_library.dart';
 import 'package:flutter_application_1/view/home.dart';
 import 'package:flutter_application_1/view/sign_in.dart';
@@ -12,13 +13,16 @@ import 'package:get/get.dart';
 import 'functions/functions.dart';
 import 'middleware/auth_middleware.dart';
 import 'model/user.dart';
+import 'utils/courses_binding.dart';
 import 'utils/forgot_password_bindings.dart';
+import 'utils/requested_books_binding.dart';
 import 'utils/sign_in_binding.dart';
 import 'utils/sign_up_binding.dart';
 import 'utils/verify_email_bindings.dart';
 import 'view/email_verification.dart';
 import 'view/forgot_password.dart';
 import 'view/istichara.dart';
+import 'view/requested_books.dart';
 import 'view/sign_up.dart';
 
 User? currentUser = FirebaseAuth.instance.currentUser;
@@ -98,6 +102,16 @@ class MyApp extends StatelessWidget {
           name: "/ElectronicLibrary",
           page: () => const ElectronicLibrary(),
           binding: HelpFullBinding(),
+        ),
+        GetPage(
+          name: "/RequestedBooks",
+          page: () => const RequestedBooks(),
+          binding: RequestedBooksBinding(),
+        ),
+        GetPage(
+          name: "/Courses",
+          page: () => const Courses(),
+          binding: CoursesBinding(),
         ),
         // GetPage(
         //   name: "/AddForm",
