@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_application_1/utils/home_binding.dart';
+import 'package:flutter_application_1/utils/istichara_binding.dart';
 import 'package:flutter_application_1/view/home.dart';
 import 'package:flutter_application_1/view/sign_in.dart';
 import 'package:get/get.dart';
@@ -16,6 +17,7 @@ import 'utils/sign_up_binding.dart';
 import 'utils/verify_email_bindings.dart';
 import 'view/email_verification.dart';
 import 'view/forgot_password.dart';
+import 'view/istichara.dart';
 import 'view/sign_up.dart';
 
 User? currentUser = FirebaseAuth.instance.currentUser;
@@ -85,6 +87,11 @@ class MyApp extends StatelessWidget {
           name: "/Home",
           page: () => const Home(),
           binding: HomeBinding(),
+        ),
+        GetPage(
+          name: "/Istichara",
+          page: () => const Istichara(),
+          binding: IsticharaBinding(),
         ),
         // GetPage(
         //   name: "/AddForm",

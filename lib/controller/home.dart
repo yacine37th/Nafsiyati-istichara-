@@ -8,7 +8,7 @@ class HomeController extends GetxController {
       id: "0",
       topicIcon: "assets/images/consultation.png",
       topicName: "طلب استشارات",
-      link: '/Notifications',
+      link: '/Istichara',
       conditions: '',
     ),
     EventModel(
