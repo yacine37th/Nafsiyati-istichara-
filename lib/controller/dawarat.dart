@@ -20,9 +20,7 @@ class DawaratController extends GetxController {
         formations.addAll({
           value.docs[index].id: FormationModel(
             id: value.docs[index].id,
-            name: value.docs[index]["formationUserName"],
             description: value.docs[index]["formationText"],
-            userID: value.docs[index]["formationUserID"],
             date: MainFunctions.dateFormat.format(DateTime.parse(
                 value.docs[index]["formationDate"].toDate().toString())),
             addedDate: MainFunctions.dateFormat.format(DateTime.parse(

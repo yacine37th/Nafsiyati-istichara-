@@ -121,11 +121,6 @@ class MyApp extends StatelessWidget {
           binding: DawaratBinding(),
         ),
         // GetPage(
-        //   name: "/AddForm",
-        //   page: () => const AddForm(),
-        //   binding: AddFormBinding(),
-        // ),
-        // GetPage(
         //   name: "/ReservationForm",
         //   page: () => const ReservationForm(),
         //   binding: ReservationFormBinding(),

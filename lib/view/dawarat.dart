@@ -22,6 +22,10 @@ class Dawarat extends StatelessWidget {
               Icons.arrow_back_ios_outlined,
               color: Colors.white,
             )),
+        title: const Text(
+          "الدورات",
+          style: TextStyle(color: AppColors.whiteColor),
+        ),
         elevation: 0,
         backgroundColor: AppColors.kPrimary2,
         iconTheme: const IconThemeData(color: Colors.white),
@@ -37,7 +41,10 @@ class Dawarat extends StatelessWidget {
         builder: (context) {
           if (dawaratController.formations.isEmpty) {
             return const Center(
-              child: Text('لا يوجد دورات حاليا'),
+              child: Text(
+                'لا يوجد دورات حاليا',
+                style: TextStyle(fontSize: 20),
+              ),
             );
           } else {
             return ListView.builder(
@@ -125,7 +132,9 @@ class Dawarat extends StatelessWidget {
                                                       .date
                                                       .toString())) ==
                                           0
-                                  ? Row(
+                                  ? Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         const Text(
                                           "متبقي :  ",
