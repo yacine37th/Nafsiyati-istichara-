@@ -29,7 +29,7 @@ class HomeController extends GetxController {
       id: "3",
       topicIcon: "assets/images/seo-training.png",
       topicName: "دورات تدريبية",
-      link: '/SiyanaForm',
+      link: '/Dawarat',
       conditions: '',
     ),
   ];

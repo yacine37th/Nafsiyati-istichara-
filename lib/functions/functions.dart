@@ -10,11 +10,13 @@ import 'package:get/get.dart';
 import '../main.dart';
 import '../model/user.dart';
 import '../theme/main_colors.dart';
-// import 'package:intl/intl.dart' as intl;
+import 'package:intl/intl.dart' as intl;
 
 class MainFunctions {
   // static SharedPreferences? sharredPrefs;
   // static intl.DateFormat dateFormat = intl.DateFormat('yyyy-MM-dd');
+  static intl.DateFormat dateFormat = intl.DateFormat('yyyy-MM-dd hh:mm:ss');
+
   static TextDirection? textDirection = TextDirection.rtl;
   static File? pickedImage;
 

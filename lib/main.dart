@@ -5,6 +5,7 @@ import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_application_1/utils/home_binding.dart';
 import 'package:flutter_application_1/utils/help_ful_binding.dart';
 import 'package:flutter_application_1/view/courses.dart';
+import 'package:flutter_application_1/view/dawarat.dart';
 import 'package:flutter_application_1/view/electronic_library.dart';
 import 'package:flutter_application_1/view/home.dart';
 import 'package:flutter_application_1/view/sign_in.dart';
@@ -14,6 +15,7 @@ import 'functions/functions.dart';
 import 'middleware/auth_middleware.dart';
 import 'model/user.dart';
 import 'utils/courses_binding.dart';
+import 'utils/dawarat_binding.dart';
 import 'utils/forgot_password_bindings.dart';
 import 'utils/requested_books_binding.dart';
 import 'utils/sign_in_binding.dart';
@@ -112,6 +114,11 @@ class MyApp extends StatelessWidget {
           name: "/Courses",
           page: () => const Courses(),
           binding: CoursesBinding(),
+        ),
+        GetPage(
+          name: "/Dawarat",
+          page: () => const Dawarat(),
+          binding: DawaratBinding(),
         ),
         // GetPage(
         //   name: "/AddForm",
