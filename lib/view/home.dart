@@ -53,7 +53,7 @@ class Home extends StatelessWidget {
                           arguments: topicsData.topicName);
                     },
                     child: Card(
-                      color: AppColors.kPrimary2,
+                      color: AppColors.greenColor,
                       elevation: 10,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),

@@ -27,12 +27,12 @@ class Dawarat extends StatelessWidget {
           style: TextStyle(color: AppColors.whiteColor),
         ),
         elevation: 0,
-        backgroundColor: AppColors.kPrimary2,
+        backgroundColor: AppColors.greenColor,
         iconTheme: const IconThemeData(color: Colors.white),
         bottom: PreferredSize(
             preferredSize: const Size(0, 0),
             child: Container(
-              color: AppColors.kPrimary2,
+              color: AppColors.greenColor,
               height: 1,
             )),
       ),
