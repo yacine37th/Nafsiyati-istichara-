@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/courses.dart';
 import 'package:get/get.dart';
 
+import '../theme/main_colors.dart';
+
 class Courses extends StatelessWidget {
   const Courses({super.key});
 
@@ -9,6 +11,18 @@ class Courses extends StatelessWidget {
   Widget build(BuildContext context) {
     CoursesController coursesController = Get.find();
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: AppColors.greenColor,
+        leading: IconButton(
+            onPressed: () {
+              navigator!.pop();
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios_outlined,
+              color: Colors.white,
+            )),
+      ),
       body: ListView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
@@ -31,9 +45,7 @@ class Courses extends StatelessWidget {
                 alignment: Alignment.center,
                 children: [
                   Image.asset(
-                    coursesController.cours.values
-                        .elementAt(index)
-                        .picutre!,
+                    coursesController.cours.values.elementAt(index).picutre!,
                     fit: BoxFit.cover,
                   ),
                   IconButton(
@@ -45,9 +57,7 @@ class Courses extends StatelessWidget {
                       print(
                           'Play button pressed for video ${coursesController.cours.values.elementAt(index).url!}');
                       coursesController.urlLauncher(
-                          coursesController.cours.values
-                              .elementAt(index)
-                              .url!);
+                          coursesController.cours.values.elementAt(index).url!);
                     },
                   ),
                 ],
