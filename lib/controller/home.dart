@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../model/event.dart';
 
@@ -15,7 +16,8 @@ class HomeController extends GetxController {
       id: "1",
       topicIcon: "assets/images/care-treatment-heart.png",
       topicName: "طلب علاج",
-      link: '/IwaaStudent',
+      link:
+          'https://docs.google.com/forms/d/e/1FAIpQLSeK2FAY4wR03aJTE95DDm6JzI4sHBiXyQn3jtE9sDjksxOZ1Q/viewform',
       conditions: '',
     ),
     EventModel(
@@ -33,4 +35,11 @@ class HomeController extends GetxController {
       conditions: '',
     ),
   ];
+
+  void launchURL(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri)) {
+      throw 'Could not launch $url';
+    }
+  }
 }

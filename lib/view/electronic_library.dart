@@ -37,14 +37,14 @@ class ElectronicLibrary extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text(
-              ' يمكنك طلب الاستشارات المتوفرة :',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.black,
-              ),
-            ),
-            const SizedBox(height: 60),
+            // const Text(
+            //   ' يمكنك طلب الاستشارات المتوفرة :',
+            //   style: TextStyle(
+            //     fontSize: 20,
+            //     color: Colors.black,
+            //   ),
+            // ),
+            // const SizedBox(height: 60),
             ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),

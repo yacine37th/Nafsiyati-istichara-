@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controller/request_books.dart';
+import '../theme/colors.dart';
 import '../theme/main_colors.dart';
 import 'widgets.dart';
 
@@ -33,60 +34,122 @@ class RequestedBooks extends StatelessWidget {
             )),
       ),
       backgroundColor: Colors.white,
-      body: GetBuilder<RequestedBooksController>(builder: (context) {
-        if (requestedBooksController.requestedBooks.isEmpty) {
-          return const Center(
-            child: Text("لا يوجد كتب"),
-          );
-        } else {
-          return ListView(
-            physics: const BouncingScrollPhysics(),
-            // controller: requestedBooksController.scrollController,
-            children: [
-              GridView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                shrinkWrap: true,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    crossAxisSpacing: 12,
-                    mainAxisSpacing: 12,
-                    childAspectRatio: 0.77),
-                itemCount: requestedBooksController.requestedBooks.length,
-                itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () {
-                      Get.toNamed("/BookDetails",
-                          arguments: requestedBooksController
-                              .requestedBooks.values
-                              .elementAt(index));
+      //   body: GetBuilder<RequestedBooksController>(builder: (context) {
+      //     if (requestedBooksController.requestedBooks.isEmpty) {
+      //       return const Center(
+      //         child: Text("لا يوجد كتب"),
+      //       );
+      //     } else {
+      //       return ListView(
+      //         physics: const BouncingScrollPhysics(),
+      //         // controller: requestedBooksController.scrollController,
+      //         children: [
+      //           GridView.builder(
+      //             physics: const NeverScrollableScrollPhysics(),
+      //             padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      //             shrinkWrap: true,
+      //             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      //                 crossAxisCount: 3,
+      //                 crossAxisSpacing: 12,
+      //                 mainAxisSpacing: 12,
+      //                 childAspectRatio: 0.77),
+      //             itemCount: requestedBooksController.requestedBooks.length,
+      //             itemBuilder: (context, index) {
+      //               return InkWell(
+      //                 onTap: () {
+      //                   Get.toNamed("/BookDetails",
+      //                       arguments: requestedBooksController
+      //                           .requestedBooks.values
+      //                           .elementAt(index));
+      //                 },
+      //                 // child: BookThumnail(
+      //                 //     url: requestedBooksController.requestedBooks.values
+      //                 //         .elementAt(index)
+      //                 //         .thumbnail!),
+      //               );
+      //             },
+      //           ),
+      //           // Builder(
+      //           //   builder: (context) {
+      //           //     if (requestedBooksController.isFetching) {
+      //           //       return Column(
+      //           //         children: const [
+      //           //           SizedBox(height: 60),
+      //           //           Center(child: CircularProgressIndicator()),
+      //           //           SizedBox(height: 60)
+      //           //         ],
+      //           //       );
+      //           //     } else {
+      //           //       return const SizedBox();
+      //           //     }
+      //           //   },
+      //           // )
+      //         ],
+      //       );
+      //     }
+      //   }),
+      // );
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 30,
+            ),
+            Column(
+              children: [
+                GetBuilder<RequestedBooksController>(builder: (context) {
+                  return GridView.builder(
+                    physics: const BouncingScrollPhysics(),
+                    padding: const EdgeInsets.all(10),
+                    itemCount: requestedBooksController.requestedBooks.length,
+                    shrinkWrap: true,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2, // Number of columns
+                      childAspectRatio:
+                          0.7, // Adjust this for book thumbnail aspect ratio
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                    ),
+                    itemBuilder: (context, index) {
+                      return InkWell(
+                          onTap: () {
+                            Get.toNamed("/BookContent",
+                                arguments: requestedBooksController
+                                    .requestedBooks.values
+                                    .elementAt(index));
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(5)),
+                                border: Border.all(color: greyColor)),
+                            child: ClipRRect(
+                                borderRadius: BorderRadius.circular(5),
+                                child: Center(
+                                  child: Text(requestedBooksController
+                                      .requestedBooks.values
+                                      .elementAt(index)
+                                      .title!),
+                                )),
+                          )
+                          // Center(
+                          //   child: Text(requestedBooksController
+                          //       .requestedBooks.values
+                          //       .elementAt(index)
+                          //       .title!),
+                          // )
+
+                          );
                     },
-                    child: BookThumnail(
-                        url: requestedBooksController.requestedBooks.values
-                            .elementAt(index)
-                            .thumbnail!),
                   );
-                },
-              ),
-              // Builder(
-              //   builder: (context) {
-              //     if (requestedBooksController.isFetching) {
-              //       return Column(
-              //         children: const [
-              //           SizedBox(height: 60),
-              //           Center(child: CircularProgressIndicator()),
-              //           SizedBox(height: 60)
-              //         ],
-              //       );
-              //     } else {
-              //       return const SizedBox();
-              //     }
-              //   },
-              // )
-            ],
-          );
-        }
-      }),
+                }),
+                const SizedBox(height: 10),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

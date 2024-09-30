@@ -37,13 +37,13 @@ class Istichara extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text(
-              ' يمكنك طلب الاستشارات المتوفرة :',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.black,
-              ),
-            ),
+            // const Text(
+            //   ' يمكنك طلب الاستشارات المتوفرة :',
+            //   style: TextStyle(
+            //     fontSize: 20,
+            //     color: Colors.black,
+            //   ),
+            // ),
             const SizedBox(height: 60),
             ListView.builder(
               shrinkWrap: true,
@@ -55,7 +55,8 @@ class Istichara extends StatelessWidget {
                   children: [
                     CustomButton(
                         onPress: () {
-                          Get.toNamed(activity.link);
+                          // Get.toNamed(activity.link);
+                          helpFulController.launchURL(activity.link);
                         },
                         text: activity.name,
                         colorbtn: Colors.black,

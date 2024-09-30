@@ -49,8 +49,12 @@ class Home extends StatelessWidget {
                   return GestureDetector(
                     onTap: () {
                       print(topicsData.link);
-                      Get.toNamed(topicsData.link,
-                          arguments: topicsData.topicName);
+                      if (topicsData.topicName == "طلب علاج") {
+                        homeController.launchURL(topicsData.link);
+                      } else {
+                        Get.toNamed(topicsData.link,
+                            arguments: topicsData.topicName);
+                      }
                     },
                     child: Card(
                       color: AppColors.greenColor,

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_application_1/utils/home_binding.dart';
 import 'package:flutter_application_1/utils/help_ful_binding.dart';
+import 'package:flutter_application_1/view/book_content.dart';
 import 'package:flutter_application_1/view/courses.dart';
 import 'package:flutter_application_1/view/dawarat.dart';
 import 'package:flutter_application_1/view/electronic_library.dart';
@@ -14,6 +15,7 @@ import 'package:get/get.dart';
 import 'functions/functions.dart';
 import 'middleware/auth_middleware.dart';
 import 'model/user.dart';
+import 'utils/book_content.dart';
 import 'utils/courses_binding.dart';
 import 'utils/dawarat_binding.dart';
 import 'utils/forgot_password_bindings.dart';
@@ -120,11 +122,10 @@ class MyApp extends StatelessWidget {
           page: () => const Dawarat(),
           binding: DawaratBinding(),
         ),
-        // GetPage(
-        //   name: "/ReservationForm",
-        //   page: () => const ReservationForm(),
-        //   binding: ReservationFormBinding(),
-        // ),
+        GetPage(
+            name: "/BookContent",
+            page: () => const BookContent(),
+            binding: BookContentBinding()),
       ],
       initialRoute: "/Home",
     );

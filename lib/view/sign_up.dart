@@ -56,9 +56,6 @@ class SignUp extends StatelessWidget {
                         if (val!.isEmpty) {
                           return "الرجاء ملء اسم المستخدم الخاص بك";
                         }
-                        if (!RegExp(r'^[a-zA-Z]+$').hasMatch(val)) {
-                          return "يجب أن يتكون حقل اسم المستخدم من 3 أحرف على الأقل.";
-                        }
                         return null;
                       },
                       initialValue: signUpController.userName,
