@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
           name: "/SignIn",
           page: () => const SignIn(),
           binding: SignInBinding(),
-          // middlewares: [AuthMiddleware()]
+          middlewares: [AuthMiddleware()]
         ),
         GetPage(
             name: "/EmailVerification",
@@ -127,7 +127,7 @@ class MyApp extends StatelessWidget {
             page: () => const BookContent(),
             binding: BookContentBinding()),
       ],
-      initialRoute: "/Home",
+      initialRoute: "/SignIn",
     );
   }
 }
