@@ -12,6 +12,9 @@ class RequestedBooksController extends GetxController {
     "5": BookModel(id: '&', title: "كتاب 5", url: "assets/books/book5.pdf"),
     "6": BookModel(id: '&', title: "كتاب 6", url: "assets/books/book6.pdf"),
     "7": BookModel(id: '&', title: "كتاب 7", url: "assets/books/book7.pdf"),
+    "8": BookModel(id: '&', title: "كتاب 8", url: "assets/books/book8.pdf"),
+    "9": BookModel(id: '&', title: "كتاب 9", url: "assets/books/book9.pdf"),
+    "10": BookModel(id: '&', title: "كتاب 10", url: "assets/books/book10.pdf"),
   };
 
   // Future<void> getRequestedBooks() async {

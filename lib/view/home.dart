@@ -123,17 +123,17 @@ class Home extends StatelessWidget {
                   color: Colors.black87,
                 ),
               ),
-              ListTile(
-                leading: const Icon(Icons.home),
-                title: const Text(
-                  'الرئيسية',
-                  style: TextStyle(fontSize: 18.0),
-                ),
-                onTap: () {
-                  // homeScreenController.switchBetweenScreens(0);
-                  Get.back();
-                },
-              ),
+              // ListTile(
+              //   leading: const Icon(Icons.home),
+              //   title: const Text(
+              //     'الرئيسية',
+              //     style: TextStyle(fontSize: 18.0),
+              //   ),
+              //   onTap: () {
+              //     // homeScreenController.switchBetweenScreens(0);
+              //     Get.back();
+              //   },
+              // ),
               ListTile(
                 leading: Icon(Icons.phone),
                 title: const Text(
@@ -183,14 +183,14 @@ rafikcom2024@gmail.com
               ListTile(
                 leading: Icon(Icons.info_rounded),
                 title: const Text(
-                  'نبدة عتا',
+                  'نبدة عنا',
                   style: TextStyle(
                     fontSize: 18.0,
                   ),
                 ),
                 onTap: () {
                   Get.defaultDialog(
-                    title: 'نبدة عتا',
+                    title: 'نبدة عنا',
                     content: Column(
                       children: [
                         Text('''
