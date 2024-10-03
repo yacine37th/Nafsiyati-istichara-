@@ -10,7 +10,7 @@ class EmailVerification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // EmailVerificationController emailVerificationController = Get.find();
+    EmailVerificationController emailVerificationController = Get.find();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -53,7 +53,7 @@ class EmailVerification extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  // emailVerificationController.resendVerificationEmail();
+                  emailVerificationController.resendVerificationEmail();
                 },
                 style: ButtonStyle(
                     foregroundColor: MaterialStateProperty.all(
