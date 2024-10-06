@@ -119,18 +119,18 @@ class RequestedBooks extends StatelessWidget {
                                     .requestedBooks.values
                                     .elementAt(index));
                           },
-                          child: Container(
+                          child:Container(
                             decoration: BoxDecoration(
                                 borderRadius:
                                     const BorderRadius.all(Radius.circular(5)),
                                 border: Border.all(color: greyColor)),
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(5),
-                                child: Center(
-                                  child: Text(requestedBooksController
-                                      .requestedBooks.values
+                                child: Image.network(
+                                  requestedBooksController.requestedBooks.values
                                       .elementAt(index)
-                                      .title!),
+                                      .imageUrl!,
+                                  fit: BoxFit.cover,
                                 )),
                           )
                           // Center(

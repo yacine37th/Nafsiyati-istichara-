@@ -34,7 +34,7 @@ class BookContent extends StatelessWidget {
                 print(page);
               },
               nightMode: false)
-          .fromAsset(bookContentController.book.url!),
+          .fromUrl(bookContentController.book.url!),
     );
   }
 }
