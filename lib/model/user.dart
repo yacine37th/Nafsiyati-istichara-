@@ -4,13 +4,19 @@ class UserModel {
   late String? name;
   // late String? wilaya;
   // late String? commune;
-  // late String? type;
+  late bool? nafsiya;
+  late String? zawajiya;
+  late String? tarbiya;
+  late String? ilaj;
   UserModel({
     required this.uID,
     required this.email,
     required this.name,
     // required this.wilaya,
     // required this.commune,
-    // required this.type,
+    this.nafsiya,
+    this.tarbiya,
+    this.zawajiya,
+    this.ilaj,
   });
 }

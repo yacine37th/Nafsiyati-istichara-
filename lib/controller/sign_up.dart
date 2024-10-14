@@ -228,7 +228,10 @@ class SignUpController extends GetxController {
         "userID": credential.user!.uid,
         "userEmail": userEmailAddress,
         "userName": userName,
-        // "userWilaya": selectedValue
+        "userRequestZawaj": false,
+        "userRequestNafsiya": false,
+        "userRequestTarbiya": false,
+        "userRequestIlaj": false,
       });
       await FirebaseAuth.instance.currentUser?.sendEmailVerification();
       Get.back();
@@ -272,5 +275,4 @@ class SignUpController extends GetxController {
       );
     }
   }
-
 }

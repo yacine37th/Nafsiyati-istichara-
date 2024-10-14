@@ -56,7 +56,9 @@ class Istichara extends StatelessWidget {
                     CustomButton(
                         onPress: () {
                           // Get.toNamed(activity.link);
-                          helpFulController.launchURL(activity.link);
+                          print(activity.name);
+                          helpFulController.makeRequest(activity.name , context);
+                          // helpFulController.launchURL(activity.link);
                         },
                         text: activity.name,
                         colorbtn: Colors.black,

@@ -158,59 +158,61 @@ class Dawarat extends StatelessWidget {
                                               color: AppColors.kPrimary2,
                                               fontSize: 19),
                                         ),
-                                      ],
-                                    )
-                                  : TextButton(
-                                      onPressed: () {
-                                        dawaratController.launchUrl2(
-                                            dawaratController.formations.values
-                                                .elementAt(index)
-                                                .link!);
-                                      },
-                                      style: ButtonStyle(
-                                        foregroundColor:
-                                            MaterialStateProperty.all(
-                                                AppColors.kPrimary2),
-                                        backgroundColor:
-                                            MaterialStateProperty.all(
-                                                AppColors.kPrimary2),
-                                        overlayColor:
-                                            MaterialStateColor.resolveWith(
-                                                (states) => AppColors
-                                                    .kPrimary2Onpress
-                                                    .withOpacity(0.2)),
-                                        shape: MaterialStateProperty.all(
-                                            RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(100),
-                                          side: const BorderSide(
-                                              color: AppColors.kPrimary2),
-                                        )),
-                                      ),
-                                      child: Card(
-                                        elevation: 0,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(100),
-                                        ),
-                                        color: Colors.transparent,
-                                        child: Container(
-                                          alignment: Alignment.center,
-                                          width: double.maxFinite,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(30),
+                                        TextButton(
+                                          onPressed: () {
+                                            dawaratController.launchUrl2(
+                                                dawaratController
+                                                    .formations.values
+                                                    .elementAt(index)
+                                                    .link!);
+                                          },
+                                          style: ButtonStyle(
+                                            foregroundColor:
+                                                MaterialStateProperty.all(
+                                                    AppColors.kPrimary2),
+                                            backgroundColor:
+                                                MaterialStateProperty.all(
+                                                    AppColors.kPrimary2),
+                                            overlayColor:
+                                                MaterialStateColor.resolveWith(
+                                                    (states) => AppColors
+                                                        .kPrimary2Onpress
+                                                        .withOpacity(0.2)),
+                                            shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(100),
+                                              side: const BorderSide(
+                                                  color: AppColors.kPrimary2),
+                                            )),
                                           ),
-                                          child: const Text(
-                                            "إضغط هنا للإنظمام إلى الدورة",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 19,
+                                          child: Card(
+                                            elevation: 0,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(100),
+                                            ),
+                                            color: Colors.transparent,
+                                            child: Container(
+                                              alignment: Alignment.center,
+                                              width: double.maxFinite,
+                                              decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(30),
+                                              ),
+                                              child: const Text(
+                                                "إضغط هنا للإنظمام إلى الدورة",
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 19,
+                                                ),
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ),
-                                    )),
+                                        )
+                                      ],
+                                    )
+                                  : SizedBox())
                         ],
                       ),
                     ),
