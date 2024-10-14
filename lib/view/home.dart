@@ -167,9 +167,10 @@ class Home extends StatelessWidget {
                   final topicsData = homeController.flutterTopicsList[index];
                   return GestureDetector(
                     onTap: () {
-                      print(topicsData.link);
+                      print(topicsData.isConfirm);
+                      print(currentUserInfos.ilaj);
                       if (topicsData.topicName == "طلب علاج") {
-                        if (topicsData.isConfirm!) {
+                        if (currentUserInfos.ilaj!) {
                           homeController.launchURL(topicsData.link);
                         } else {
                           homeController.makeRequest("علاج", context);
