@@ -34,12 +34,40 @@ class HomeController extends GetxController {
       link: '/Dawarat',
       conditions: '',
     ),
+    EventModel(
+      id: "3",
+      topicIcon: "assets/images/seo-training.png",
+      topicName: "حجز جلسة حضورية مع أحد المختصين بمؤسسة النفس المطمئة",
+      link: '',
+      number: "+213664855857",
+      conditions: '',
+    ),
+    EventModel(
+      id: "3",
+      topicIcon: "assets/images/seo-training.png",
+      topicName: "الاشتراكات المتوفرة",
+      link: '/Dawarat',
+      content: '''
+طلب الاشتراك في التطبيق-بالشهر 5000 دج
+بالثلاثة اشهر 12000 دج
+بالستة اشهر 20000 دج 
+بالسنة 30000 دج
+''',
+      conditions: '',
+    ),
   ];
 
   void launchURL(String url) async {
     final Uri uri = Uri.parse(url);
     if (!await launchUrl(uri)) {
       throw 'Could not launch $url';
+    }
+  }
+
+  void makePhoneCall(String phoneNumber) async {
+    final Uri uri = Uri(scheme: 'tel', path: phoneNumber);
+    if (!await launchUrl(uri)) {
+      throw 'Could not launch $uri';
     }
   }
 }

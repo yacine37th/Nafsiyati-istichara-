@@ -14,7 +14,7 @@ class AppDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // HomeController homeScreenController = Get.find(); // if (io == 0) {
+    HomeController homeScreenController = Get.find(); // if (io == 0) {
     //   controller = Get.find<HomeController>();
     // } else if (io == 1) {
     //   controller = Get.find<PrivateHospitalsController>();
@@ -76,23 +76,25 @@ class AppDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
+              // 0664855857
               // homeScreenController.switchBetweenScreens(3);
-              Get.back();
+              homeScreenController.makePhoneCall("+213664855857");
+              // Get.back();
             },
           ),
-          ListTile(
-            leading: Icon(Icons.info_rounded),
-            title: const Text(
-              'نبدة عتا',
-              style: TextStyle(
-                fontSize: 18.0,
-              ),
-            ),
-            onTap: () {
-              // homeScreenController.switchBetweenScreens(4);
-              Get.back();
-            },
-          ),
+          // ListTile(
+          //   leading: Icon(Icons.info_rounded),
+          //   title: const Text(
+          //     'نبدة عتا',
+          //     style: TextStyle(
+          //       fontSize: 18.0,
+          //     ),
+          //   ),
+          //   onTap: () {
+          //     // homeScreenController.switchBetweenScreens(4);
+          //     Get.back();
+          //   },
+          // ),
           ListTile(
             leading: const Icon(Icons.logout),
             title: const Text(

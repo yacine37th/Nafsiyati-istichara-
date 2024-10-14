@@ -149,6 +149,7 @@ class Home extends StatelessWidget {
                       children: [
                         Text('''
 rafikcom2024@gmail.com
+0664855857
 '''),
                         const SizedBox(
                           height: 15,
@@ -280,6 +281,45 @@ rafikcom2024@gmail.com
                       print(topicsData.link);
                       if (topicsData.topicName == "طلب علاج") {
                         homeController.launchURL(topicsData.link);
+                      } else if (topicsData.number != null) {
+                        homeController.makePhoneCall(topicsData.number!);
+                      } else if (topicsData.content != null) {
+                        Get.defaultDialog(
+                            barrierDismissible: false,
+                            title: "الاشتراكات",
+                            content: Column(
+                              children: [
+                                Text(topicsData.content!),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                TextButton(
+                                  style: ButtonStyle(
+                                      foregroundColor: WidgetStateProperty.all(
+                                          AppColors.kPrimary2),
+                                      backgroundColor: WidgetStateProperty.all(
+                                          AppColors.kPrimary2),
+                                      overlayColor:
+                                          WidgetStateColor.resolveWith(
+                                              (states) => Colors.white
+                                                  .withOpacity(0.1)),
+                                      shape: WidgetStateProperty.all(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(100),
+                                              side: const BorderSide(
+                                                color: AppColors.kPrimary2,
+                                              )))),
+                                  onPressed: () {
+                                    Get.back();
+                                  },
+                                  child: Text(
+                                    "متابعة".tr,
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                              ],
+                            ));
                       } else {
                         Get.toNamed(topicsData.link,
                             arguments: topicsData.topicName);
