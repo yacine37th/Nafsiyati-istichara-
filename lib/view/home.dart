@@ -15,132 +15,139 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     HomeController homeController = Get.find();
     return Scaffold(
-//         drawer: Drawer(
-//           child: ListView(
-//             padding: EdgeInsets.zero,
-//             children: [
-//               UserAccountsDrawerHeader(
-//                 arrowColor: Colors.blue,
-//                 currentAccountPicture: CircleAvatar(
-//                   child: Text(currentUserInfos.name![0]),
-//                 ),
-//                 accountEmail: Text(currentUserInfos.email!),
-//                 accountName: Text(
-//                   currentUserInfos.name!,
-//                   style: const TextStyle(
-//                     fontSize: 24.0,
-//                   ),
-//                 ),
-//                 decoration: const BoxDecoration(
-//                   color: Colors.black87,
-//                 ),
-//               ),
-//               ListTile(
-//                 leading: Icon(Icons.phone),
-//                 title: const Text(
-//                   'اتصل بنا',
-//                   style: TextStyle(
-//                     fontSize: 18.0,
-//                   ),
-//                 ),
-//                 onTap: () {
-//                   Get.defaultDialog(
-//                     title: 'اتصل بنا',
-//                     content: Column(
-//                       children: [
-//                         Text('''
-// rafikcom2024@gmail.com
-// 0664855857
-// '''),
-//                         const SizedBox(
-//                           height: 15,
-//                         ),
-//                         TextButton(
-//                           style: ButtonStyle(
-//                               foregroundColor:
-//                                   WidgetStateProperty.all(AppColors.kPrimary2),
-//                               backgroundColor:
-//                                   WidgetStateProperty.all(AppColors.kPrimary2),
-//                               overlayColor: WidgetStateColor.resolveWith(
-//                                   (states) => Colors.white.withOpacity(0.1)),
-//                               shape: WidgetStateProperty.all(
-//                                   RoundedRectangleBorder(
-//                                       borderRadius: BorderRadius.circular(100),
-//                                       side: const BorderSide(
-//                                         color: AppColors.kPrimary2,
-//                                       )))),
-//                           onPressed: () {
-//                             Get.back();
-//                           },
-//                           child: Text(
-//                             "متابعة".tr,
-//                             style: TextStyle(color: Colors.white),
-//                           ),
-//                         ),
-//                       ],
-//                     ),
-//                   );
-//                 },
-//               ),
-//               ListTile(
-//                 leading: Icon(Icons.info_rounded),
-//                 title: const Text(
-//                   'نبدة عنا',
-//                   style: TextStyle(
-//                     fontSize: 18.0,
-//                   ),
-//                 ),
-//                 onTap: () {
-//                   Get.defaultDialog(
-//                     title: 'نبدة عنا',
-//                     content: Column(
-//                       children: [
-//                         Text('''
-// تطبيق رفيق com هو الحل المتكامل لتقديم خدمات الرعاية النفسية والاجتماعية عن بعد عبر جلسات ودورات يقدمها نخبة من المختصين المرخصين بكل خصوصية وسرية'''),
-//                         const SizedBox(
-//                           height: 15,
-//                         ),
-//                         TextButton(
-//                           style: ButtonStyle(
-//                               foregroundColor:
-//                                   WidgetStateProperty.all(AppColors.kPrimary2),
-//                               backgroundColor:
-//                                   WidgetStateProperty.all(AppColors.kPrimary2),
-//                               overlayColor: WidgetStateColor.resolveWith(
-//                                   (states) => Colors.white.withOpacity(0.1)),
-//                               shape: WidgetStateProperty.all(
-//                                   RoundedRectangleBorder(
-//                                       borderRadius: BorderRadius.circular(100),
-//                                       side: const BorderSide(
-//                                         color: AppColors.kPrimary2,
-//                                       )))),
-//                           onPressed: () {
-//                             Get.back();
-//                           },
-//                           child: Text(
-//                             "متابعة".tr,
-//                             style: TextStyle(color: Colors.white),
-//                           ),
-//                         ),
-//                       ],
-//                     ),
-//                   );
-//                 },
-//               ),
-//               ListTile(
-//                 leading: const Icon(Icons.logout),
-//                 title: const Text(
-//                   'تسجيل الخروج',
-//                   style: TextStyle(
-//                     fontSize: 18.0,
-//                   ),
-//                 ),
-//                 onTap: () {},
-//               ),
-//             ],
-//           ),
-//         ),
-
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              GetBuilder<HomeController>(
+                // init: MyController(),
+                initState: (_) {},
+                builder: (_) {
+                  return UserAccountsDrawerHeader(
+                    arrowColor: Colors.blue,
+                    currentAccountPicture: CircleAvatar(
+                      child: Text(currentUserInfos.name![0]),
+                    ),
+                    accountEmail: Text(currentUserInfos.email!),
+                    accountName: Text(
+                      currentUserInfos.name!,
+                      style: const TextStyle(
+                        fontSize: 24.0,
+                      ),
+                    ),
+                    decoration: const BoxDecoration(
+                      color: Colors.black87,
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.phone),
+                title: const Text(
+                  'اتصل بنا',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                  ),
+                ),
+                onTap: () {
+                  Get.defaultDialog(
+                    title: 'اتصل بنا',
+                    content: Column(
+                      children: [
+                        Text('''
+rafikcom2024@gmail.com
+0664855857
+'''),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        TextButton(
+                          style: ButtonStyle(
+                              foregroundColor:
+                                  WidgetStateProperty.all(AppColors.kPrimary2),
+                              backgroundColor:
+                                  WidgetStateProperty.all(AppColors.kPrimary2),
+                              overlayColor: WidgetStateColor.resolveWith(
+                                  (states) => Colors.white.withOpacity(0.1)),
+                              shape: WidgetStateProperty.all(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(100),
+                                      side: const BorderSide(
+                                        color: AppColors.kPrimary2,
+                                      )))),
+                          onPressed: () {
+                            Get.back();
+                          },
+                          child: Text(
+                            "متابعة".tr,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.info_rounded),
+                title: const Text(
+                  'نبدة عنا',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                  ),
+                ),
+                onTap: () {
+                  Get.defaultDialog(
+                    title: 'نبدة عنا',
+                    content: Column(
+                      children: [
+                        Text('''
+تطبيق رفيق com هو الحل المتكامل لتقديم خدمات الرعاية النفسية والاجتماعية عن بعد عبر جلسات ودورات يقدمها نخبة من المختصين المرخصين بكل خصوصية وسرية'''),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        TextButton(
+                          style: ButtonStyle(
+                              foregroundColor:
+                                  WidgetStateProperty.all(AppColors.kPrimary2),
+                              backgroundColor:
+                                  WidgetStateProperty.all(AppColors.kPrimary2),
+                              overlayColor: WidgetStateColor.resolveWith(
+                                  (states) => Colors.white.withOpacity(0.1)),
+                              shape: WidgetStateProperty.all(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(100),
+                                      side: const BorderSide(
+                                        color: AppColors.kPrimary2,
+                                      )))),
+                          onPressed: () {
+                            Get.back();
+                          },
+                          child: Text(
+                            "متابعة".tr,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.logout),
+                title: const Text(
+                  'تسجيل الخروج',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                  ),
+                ),
+                onTap: () {
+                  MainFunctions.signOutUser();
+                },
+              ),
+            ],
+          ),
+        ),
         appBar: AppBar(
           bottom: PreferredSize(
               preferredSize: const Size(0, 0),

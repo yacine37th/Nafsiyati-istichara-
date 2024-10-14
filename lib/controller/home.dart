@@ -146,7 +146,7 @@
 //         content: '''
 // طلب الاشتراك في التطبيق-بالشهر 5000 دج
 // بالثلاثة اشهر 12000 دج
-// بالستة اشهر 20000 دج 
+// بالستة اشهر 20000 دج
 // بالسنة 30000 دج
 // ''',
 //         conditions: '',
@@ -288,7 +288,7 @@ class HomeController extends GetxController {
       EventModel(
         id: "4",
         topicIcon: "assets/images/seo-training.png",
-        topicName: "حجز جلسة حضورية مع أحد المختصين بمؤسسة النفس المطمئة",
+        topicName: "حجز جلسة حضورية",
         link: '',
         number: "+213664855857",
         conditions: '',

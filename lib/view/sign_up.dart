@@ -45,7 +45,7 @@ class SignUp extends StatelessWidget {
                   children: [
                     TextFormField(
                       textInputAction: TextInputAction.next,
-                      keyboardType: TextInputType.emailAddress,
+                      keyboardType: TextInputType.text,
                       onSaved: (username) {
                         signUpController.userName = username;
                       },
