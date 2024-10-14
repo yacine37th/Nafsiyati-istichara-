@@ -28,13 +28,18 @@ class MainFunctions {
     await FirebaseFirestore.instance
         .collection("users")
         .doc(currentUser!.uid)
-        .get()
-        .then(
+        .snapshots()
+        .listen(
       (value) async {
         currentUserInfos = UserModel(
           uID: value["userID"],
           email: value["userEmail"],
           name: value["userName"],
+
+          nafsiya: value["userRequestNafsiya"],
+          zawajiya: value["userRequestZawaj"],
+          tarbiya: value["userRequestTarbiya"],
+          ilaj: value["userRequestIlaj"],
           // wilaya: value["userWilaya"],
           // type: value["userType"],
           // commune: value["userCommune"],

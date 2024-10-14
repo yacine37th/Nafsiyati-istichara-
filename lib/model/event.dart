@@ -6,6 +6,7 @@ class EventModel {
   late String conditions;
   late String? number;
   late String? content;
+  late bool? isConfirm;
   EventModel({
     required this.id,
     required this.topicIcon,
@@ -14,5 +15,6 @@ class EventModel {
     required this.conditions,
     this.number,
     this.content,
+    this.isConfirm,
   });
 }

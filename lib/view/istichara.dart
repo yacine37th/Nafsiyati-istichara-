@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/main.dart';
 import 'package:get/get.dart';
 
 import '../controller/help_ful.dart';
@@ -56,9 +57,15 @@ class Istichara extends StatelessWidget {
                     CustomButton(
                         onPress: () {
                           // Get.toNamed(activity.link);
-                          print(activity.name);
-                          helpFulController.makeRequest(activity.name , context);
-                          // helpFulController.launchURL(activity.link);
+                          print(currentUserInfos.nafsiya);
+                          print("activity.isLocked");
+                          print(activity.isConfirm);
+                          if (activity.isConfirm!) {
+                            helpFulController.launchURL(activity.link);
+                          } else {
+                            helpFulController.makeRequest(
+                                activity.name, context);
+                          }
                         },
                         text: activity.name,
                         colorbtn: Colors.black,

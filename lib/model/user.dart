@@ -5,9 +5,9 @@ class UserModel {
   // late String? wilaya;
   // late String? commune;
   late bool? nafsiya;
-  late String? zawajiya;
-  late String? tarbiya;
-  late String? ilaj;
+  late bool? zawajiya;
+  late bool? tarbiya;
+  late bool? ilaj;
   UserModel({
     required this.uID,
     required this.email,
